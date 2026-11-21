@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101713">
+<meta name="description" content="정력원 - 중장년의 건강한 생활 습관과 활기찬 일상을 위한 프리미엄 웰니스 셀렉션">
+<title>정력원 | 활기찬 일상을 위한 프리미엄 웰니스</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap');
+:root{--ink:#15221b;--green:#20392d;--green2:#2f5140;--gold:#c7a66a;--cream:#f5f2e9;--muted:#777d75;--line:#e5e2d9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Noto Sans KR',sans-serif;color:var(--ink);background:#fff;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+.topline{background:#101713;color:#e7dfcc;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.08em}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:27px;font-weight:900;letter-spacing:-.08em;color:var(--green)}.logo small{display:block;font-size:9px;letter-spacing:.26em;color:var(--gold);font-weight:700;margin-top:-7px}.navlinks{display:flex;gap:34px;font-size:13px;font-weight:700;color:#4c554e}.navcta{background:var(--green);color:#fff;padding:15px 25px;border-radius:5px;font-size:17px;font-weight:900;white-space:nowrap;box-shadow:0 5px 16px rgba(16,37,27,.16)}
+.hero{background:radial-gradient(circle at 78% 45%,rgba(199,166,106,.18),transparent 28%),linear-gradient(112deg,#10251b 0%,#1b3829 58%,#263f30 100%);min-height:590px;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 48px,rgba(255,255,255,.018) 49px 50px);pointer-events:none}
+.hero:after{content:"";position:absolute;right:11%;top:13%;width:390px;height:390px;border:1px solid rgba(207,177,119,.28);border-radius:50%;box-shadow:0 0 0 28px rgba(207,177,119,.035),0 0 0 58px rgba(207,177,119,.025);pointer-events:none}
+.hero-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:35px;align-items:center;width:100%}
+.hero-content{position:relative;z-index:2;padding:86px 0;max-width:680px}
+.shipping-kicker{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid rgba(217,189,134,.65);border-radius:2px;color:#ead7ae;font-size:clamp(14px,1.7vw,18px);font-weight:800;letter-spacing:-.02em;background:rgba(8,20,14,.28)}
+.shipping-kicker:before{content:"";width:8px;height:8px;background:#d9bd86;border-radius:50%;box-shadow:0 0 0 5px rgba(217,189,134,.13)}
+.hero h1{font-size:clamp(54px,7.2vw,88px);line-height:1.08;letter-spacing:-.065em;margin:23px 0 20px;font-weight:900}
+.hero h1 em{font-style:normal;color:#e0c58f;display:block}
+.hero p{font-size:clamp(15px,1.5vw,18px);color:#e0e6df;line-height:1.85;margin:0 0 30px}
+.hero-visual{position:relative;z-index:1;min-height:360px;display:flex;align-items:center;justify-content:center}
+.parcel{position:relative;width:min(290px,75%);height:210px;background:linear-gradient(135deg,#d9c49a,#b18c52);transform:perspective(700px) rotateY(-13deg) rotateX(4deg);box-shadow:22px 30px 45px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.35)}
+.parcel:before{content:"";position:absolute;left:0;right:0;top:0;height:42px;background:linear-gradient(90deg,#ead8b5,#c5a36c);border-bottom:1px solid rgba(93,65,27,.2)}
+.parcel:after{content:"정력원  ·  PREMIUM";position:absolute;left:22px;right:22px;top:93px;padding:12px 5px;text-align:center;border-top:1px solid rgba(68,49,24,.35);border-bottom:1px solid rgba(68,49,24,.35);font-size:13px;font-weight:900;letter-spacing:.08em;color:#26372b}
+.parcel-ribbon{position:absolute;z-index:2;top:0;bottom:0;left:48%;width:24px;background:linear-gradient(90deg,#b18d55,#e7d3a9,#b18d55);opacity:.9}
+.parcel-caption{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);white-space:nowrap;color:#e7d6b4;font-size:11px;letter-spacing:.2em;font-weight:800}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 25px;border:1px solid transparent;font-weight:800;font-size:13px;letter-spacing:.02em;transition:.2s}.hero-cta{min-width:285px;min-height:68px;font-size:25px;font-weight:900;border-radius:6px;box-shadow:0 10px 25px rgba(0,0,0,.18)}.fixed-shop-cta{position:fixed;right:28px;bottom:26px;z-index:1000;display:flex;align-items:center;justify-content:center;gap:15px;min-width:255px;padding:20px 28px;border-radius:8px;background:#17452f;color:#fff;border:2px solid #d9bd86;box-shadow:0 12px 32px rgba(0,0,0,.24);font-size:22px;font-weight:900;letter-spacing:-.04em}.fixed-shop-cta span{color:#e5c98f;font-size:27px}.fixed-shop-cta:hover,.navcta:hover,.hero-cta:hover{transform:translateY(-2px);filter:brightness(1.06)}.btn-gold{background:var(--gold);color:#17231b}.btn-outline{border-color:rgba(255,255,255,.55);color:#fff}.btn:hover{transform:translateY(-2px)}
+.trust{background:var(--cream);padding:24px 0}.trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}.trustitem{font-size:13px;font-weight:700;color:#48544a}.trustitem span{display:block;color:var(--gold);font-family:'Playfair Display',serif;font-size:25px;margin-bottom:2px}
+section{padding:100px 0}.sectionhead{text-align:center;max-width:680px;margin:0 auto 52px}.kicker{font-size:11px;letter-spacing:.22em;color:#a1844e;font-weight:900}.sectionhead h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.05em;line-height:1.3;margin:13px 0}.sectionhead p{color:var(--muted);font-size:14px;margin:0}
+.introgrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.introvisual{min-height:440px;background:linear-gradient(145deg,rgba(18,40,29,.1),rgba(18,40,29,.2)),url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85') center/cover;border-radius:4px;position:relative}.introvisual:after{content:"WELLNESS, EVERY DAY";position:absolute;bottom:24px;left:24px;color:#fff;font-size:11px;letter-spacing:.2em;font-weight:800}.introcopy .kicker{display:block}.introcopy h2{font-size:38px;line-height:1.35;letter-spacing:-.05em;margin:16px 0 20px}.introcopy p{color:#687168;font-size:15px}.ticks{list-style:none;padding:0;margin:28px 0}.ticks li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:700}.ticks li:before{content:"✓";color:#a1844e;margin-right:12px}
+.products{background:#f8f7f2}.productgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{background:#fff;border:1px solid #eae7df;transition:.25s}.product:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(26,40,30,.08)}.productvisual{height:245px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#e9e5d8,#f8f6ef);position:relative;overflow:hidden}.bottle{width:100px;height:160px;border-radius:16px 16px 22px 22px;background:linear-gradient(90deg,#14281e,#345443 48%,#14281e);box-shadow:14px 20px 25px #0002;position:relative}.bottle:before{content:"";position:absolute;top:-18px;left:25px;width:50px;height:22px;background:#b99b62;border-radius:4px 4px 0 0}.bottle:after{content:"JUNG RYEOK WON";position:absolute;left:8px;right:8px;top:65px;text-align:center;color:#e5d2a6;font:9px Georgia;letter-spacing:.08em;border-top:1px solid #c5a66c;border-bottom:1px solid #c5a66c;padding:8px 0}.product:nth-child(2) .bottle{background:linear-gradient(90deg,#b49a65,#e1cb93 48%,#a88a50)}.product:nth-child(2) .bottle:after{color:#26372b}.product:nth-child(3) .bottle{background:linear-gradient(90deg,#333c3a,#66716a 48%,#303a35)}.producttag{position:absolute;top:16px;left:16px;background:#fff;padding:6px 10px;font-size:10px;font-weight:800;letter-spacing:.08em}.productbody{padding:25px}.productbody small{color:#a1844e;font-weight:900;letter-spacing:.15em;font-size:10px}.productbody h3{font-size:21px;margin:8px 0}.productbody p{font-size:13px;color:#737a72;min-height:48px;margin:0 0 20px}.textlink{font-size:12px;font-weight:900;border-bottom:1px solid var(--gold);padding-bottom:5px}
+.philosophy{background:#17271e;color:#fff}.philosophy .sectionhead p{color:#c4ccc4}.philosophygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.principle{border-top:1px solid #657467;padding-top:24px}.number{font:italic 34px 'Playfair Display',serif;color:#c7a66a}.principle h3{font-size:19px;margin:12px 0}.principle p{color:#c4ccc4;font-size:13px;margin:0}
+.guidegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.guide{padding:28px;border:1px solid var(--line);background:#fff}.guide b{font:30px 'Playfair Display',serif;color:#b2935c}.guide h3{font-size:16px;margin:12px 0 7px}.guide p{font-size:13px;color:#737a72;margin:0}
+.banner{background:linear-gradient(90deg,rgba(17,34,24,.94),rgba(17,34,24,.78)),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85') center/cover;padding:75px 0;color:#fff;text-align:center}.banner h2{font-size:clamp(27px,4vw,40px);margin:0 0 12px;letter-spacing:-.04em}.banner p{color:#d9e0d8;margin:0 0 26px;font-size:14px}
+.faq{max-width:800px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:20px 4px}.faq summary{cursor:pointer;font-weight:800;font-size:15px;list-style:none}.faq summary:after{content:"＋";float:right;color:#a1844e}.faq details[open] summary:after{content:"－"}.faq p{font-size:13px;color:#737a72;margin:14px 0 0}
+footer{background:#101713;color:#d4d9d2;padding:48px 0 30px}.footerrow{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}.footerlogo{font-size:25px;font-weight:900;color:#fff}.footertext{font-size:11px;color:#9da79e;line-height:2;max-width:700px}.copyright{border-top:1px solid #344137;margin-top:30px;padding-top:20px;color:#7f8b80;font-size:10px}
+.notice{background:#f3f0e8;color:#666d65;padding:18px 0;font-size:11px;line-height:1.8}
+@media(max-width:800px){.wrap{width:min(100% - 34px,600px)}.nav{height:66px}.navlinks{display:none}.navcta{font-size:15px;padding:12px 15px}.hero{min-height:650px}.hero-layout{grid-template-columns:1fr;gap:0}.hero-content{padding:68px 0 10px}.hero h1{font-size:clamp(52px,13vw,72px);margin:18px 0}.hero-visual{min-height:230px;margin-top:-2px}.parcel{width:210px;height:145px}.parcel:before{height:30px}.parcel:after{top:65px;font-size:10px}.parcel-caption{bottom:7px;font-size:9px}.hero p{font-size:15px}.hero-cta{width:100%;min-width:0;min-height:62px;font-size:22px}.fixed-shop-cta{left:17px;right:17px;bottom:14px;min-width:0;padding:16px 18px;font-size:20px}.trustgrid{grid-template-columns:1fr;gap:12px}.trustitem span{display:inline;margin-right:8px;font-size:19px}.introgrid{grid-template-columns:1fr;gap:35px}.introvisual{min-height:320px;order:2}.introcopy h2{font-size:31px}.productgrid,.philosophygrid,.guidegrid{grid-template-columns:1fr}.productvisual{height:220px}section{padding:72px 0}.sectionhead{margin-bottom:35px}.footerrow{display:block}.footertext{margin-top:15px}.hero:after{right:-160px;opacity:.5}}
+@media(min-width:801px) and (max-width:1050px){.navlinks{gap:17px}.introgrid{gap:35px}}
+</style>
+</head>
+<body>
+<div class="topline">JUNG RYEOK WON · PREMIUM WELLNESS COLLECTION</div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">정력원<small>PREMIUM WELLNESS</small></a>
+    <nav class="navlinks"><a href="#about">브랜드 소개</a><a href="#products">제품 라인업</a><a href="#value">브랜드 원칙</a><a href="#faq">자주 묻는 질문</a></nav>
+    <a class="navcta" href="https://bitmon.shop" target="_blank" rel="noopener noreferrer">정력원 바로가기　↗</a>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="wrap hero-layout">
+      <div class="hero-content">
+        <div class="shipping-kicker">평일 오후 3시 이전 주문 시</div>
+        <h1>오늘 주문하면<br><em>당일 발송</em></h1>
+        <p>기다림은 줄이고, 마음은 더 편안하게.<br>정력원은 주문하신 상품을 정성껏 준비해 빠르게 발송합니다.</p>
+        <div class="actions"><a class="btn btn-gold hero-cta" href="https://bitmon.shop" target="_blank" rel="noopener noreferrer">정력원 바로가기　↗</a></div>
+      </div>
+      <div class="hero-visual" aria-label="정력원 프리미엄 배송 패키지 일러스트">
+        <div class="parcel"><span class="parcel-ribbon"></span></div>
+        <div class="parcel-caption">CAREFULLY PACKED FOR YOU</div>
+      </div>
+    </div>
+  </section>
+  <div class="trust"><div class="wrap trustgrid">
+    <div class="trustitem"><span>01</span>평일 오후 3시 이전 주문 당일 발송</div>
+    <div class="trustitem"><span>02</span>꼼꼼하게 확인하는 제품 정보</div>
+    <div class="trustitem"><span>03</span>오래 이어가는 자기관리</div>
+  </div></div>
+
+  <section id="about"><div class="wrap introgrid">
+    <div class="introvisual" role="img" aria-label="건강한 라이프스타일을 상징하는 운동 이미지"></div>
+    <div class="introcopy">
+      <span class="kicker">ABOUT JUNG RYEOK WON</span>
+      <h2>건강한 자신감은<br>매일의 관리에서 시작됩니다.</h2>
+      <p>바쁜 일상 속에서도 나 자신을 돌보는 시간은 중요합니다. 정력원은 중장년층이 자신의 생활 패턴과 건강 상태를 살피고, 꾸준한 자기관리 습관을 만들어 갈 수 있도록 프리미엄 웰니스 제품 정보를 소개합니다.</p>
+      <ul class="ticks"><li>일상 속 건강 관리에 집중</li><li>성분과 섭취 정보를 투명하게 확인</li><li>무리하지 않고 꾸준히 이어가는 생활 습관</li></ul>
+      <a class="textlink" href="#value">정력원의 약속 알아보기　→</a>
+    </div>
+  </div></section>
+
+  <section class="products" id="products"><div class="wrap">
+    <div class="sectionhead"><span class="kicker">WELLNESS COLLECTION</span><h2>나의 라이프스타일에 맞춘<br>프리미엄 셀렉션</h2><p>제품별 실제 정보와 공식 표시사항을 확인한 뒤 선택하세요.</p></div>
+    <div class="productgrid">
+      <article class="product"><div class="productvisual"><span class="producttag">DAILY ROUTINE</span><div class="bottle"></div></div><div class="productbody"><small>01 / EVERYDAY</small><h3>데일리 밸런스</h3><p>매일의 건강 관리 루틴을 위한 기본 제품 카테고리입니다.</p><a class="textlink" href="https://bitmon.shop" target="_blank" rel="noopener noreferrer">정력원 바로가기　↗</a></div></article>
+      <article class="product"><div class="productvisual"><span class="producttag">PREMIUM CARE</span><div class="bottle"></div></div><div class="productbody"><small>02 / PREMIUM</small><h3>프리미엄 케어</h3><p>원료와 함량, 섭취 방법을 꼼꼼히 살펴보는 프리미엄 셀렉션.</p><a class="textlink" href="https://bitmon.shop" target="_blank" rel="noopener noreferrer">정력원 바로가기　↗</a></div></article>
+      <article class="product"><div class="productvisual"><span class="producttag">ACTIVE LIFE</span><div class="bottle"></div></div><div class="productbody"><small>03 / ACTIVE</small><h3>액티브 라이프</h3><p>활동적인 일상을 위한 건강 관리 제품 카테고리입니다.</p><a class="textlink" href="https://bitmon.shop" target="_blank" rel="noopener noreferrer">정력원 바로가기　↗</a></div></article>
+    </div>
+  </div></section>
+
+  <section class="philosophy" id="value"><div class="wrap">
+    <div class="sectionhead"><span class="kicker">OUR PRINCIPLES</span><h2>정력원이 생각하는<br>프리미엄의 기준</h2><p>과장된 약속보다 정확한 정보와 건강한 선택을 우선합니다.</p></div>
+    <div class="philosophygrid">
+      <div class="principle"><div class="number">01</div><h3>정보를 먼저 확인합니다</h3><p>제품의 원료, 함량, 섭취 방법, 주의사항 등 확인 가능한 정보를 바탕으로 선택할 수 있도록 안내합니다.</p></div>
+      <div class="principle"><div class="number">02</div><h3>나에게 맞는 선택</h3><p>건강 상태와 복용 중인 약이 있다면 전문가와 상담하고 자신에게 적합한 제품인지 확인하는 것이 중요합니다.</p></div>
+      <div class="principle"><div class="number">03</div><h3>꾸준한 생활 습관</h3><p>균형 잡힌 식사, 규칙적인 신체 활동, 충분한 수면 등 일상의 기본을 함께 생각합니다.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sectionhead"><span class="kicker">A SIMPLE GUIDE</span><h2>현명한 제품 선택을 위한<br>세 가지 체크포인트</h2><p>구매 전 아래 항목을 꼭 확인해 주세요.</p></div>
+    <div class="guidegrid">
+      <div class="guide"><b>01</b><h3>제품 표시사항</h3><p>제품 유형, 원료명, 함량, 제조·수입원, 유통기한을 확인하세요.</p></div>
+      <div class="guide"><b>02</b><h3>섭취 전 주의사항</h3><p>기저질환이 있거나 의약품을 복용 중이라면 의료 전문가와 먼저 상담하세요.</p></div>
+      <div class="guide"><b>03</b><h3>공식 유통 정보</h3><p>정식 유통 여부와 판매자 정보, 교환·환불 기준을 확인하세요.</p></div>
+    </div>
+  </div></section>
+
+  <section class="banner" id="contact"><div class="wrap">
+    <span class="kicker">YOUR WELLNESS JOURNEY</span><h2>오늘부터 시작하는 건강한 자기관리</h2><p>제품의 상세 정보와 공식 안내사항을 확인하고 신중하게 선택하세요.</p>
+    <a class="btn btn-gold" href="#products">제품 라인업 살펴보기　→</a>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <div class="sectionhead"><span class="kicker">FAQ</span><h2>자주 묻는 질문</h2><p>제품을 선택하기 전 궁금한 내용을 확인하세요.</p></div>
+    <div class="faq">
+      <details><summary>제품은 어떤 기준으로 선택해야 하나요?</summary><p>제품 유형과 원료·함량, 섭취 방법, 주의사항 및 공식 표시사항을 확인하고 본인의 건강 상태에 맞는지 살펴보세요.</p></details>
+      <details><summary>건강 관련 의약품을 복용 중인데 함께 이용해도 되나요?</summary><p>제품에 따라 상호작용이나 주의사항이 다를 수 있습니다. 복용 중인 의약품이 있다면 제품을 이용하기 전에 의사 또는 약사와 상담하세요.</p></details>
+      <details><summary>제품 상세 정보는 어디서 확인하나요?</summary><p>실제 판매 제품의 상세 페이지와 포장에 표시된 공식 정보를 기준으로 확인해 주세요. 이 페이지의 제품명과 이미지는 레이아웃 예시입니다.</p></details>
+    </div>
+  </div></section>
+</main>
+<a class="fixed-shop-cta" href="https://bitmon.shop" target="_blank" rel="noopener noreferrer" aria-label="정력원 바로가기, 새 창에서 열기">정력원 바로가기 <span>↗</span></a>
+<div class="notice"><div class="wrap">※ 본 페이지는 브랜드 소개용 시안입니다. 제품 이미지·명칭·설명은 예시이며 실제 판매 상품의 정보로 교체해야 합니다. 건강기능식품 또는 일반식품의 기능성을 표시·광고할 경우 관련 법령과 인정된 표시 범위를 준수해야 합니다. 질병의 예방·치료 또는 의약품과 같은 효능을 보장하지 않습니다.</div></div>
+<footer><div class="wrap">
+  <div class="footerrow"><div><div class="footerlogo">정력원</div><div style="font-size:9px;letter-spacing:.22em;color:#c7a66a">PREMIUM WELLNESS</div></div>
+    <div class="footertext">상호명: [사업자명 입력]　대표자: [대표자명 입력]<br>사업자등록번호: [사업자등록번호 입력]　통신판매업 신고번호: [신고번호 입력]<br>주소: [사업장 주소 입력]　고객센터: [연락처 입력]<br>이메일: [고객 문의 이메일 입력]</div>
+  </div>
+  <div class="copyright">© 2026 JUNG RYEOK WON. ALL RIGHTS RESERVED.　|　본 페이지의 사업자 정보는 실제 정보로 교체해 주세요.</div>
+</div></footer>
+</body>
+</html>
